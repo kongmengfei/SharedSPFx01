@@ -76,11 +76,17 @@ export default class Pnpjsuploadfiles extends React.Component<IPnpjsuploadfilesP
 
   private createItem(): void {
 
+    const list = sp.web.lists.getByTitle("kkkk");
+
+    // get all the views and their properties
+    const view = list.views.getByTitle("All Items").get().
+
+
     sp.web.lists.getByTitle("mylist").items.add({
       'Title': this.state.subject
     }).then((r: IItemAddResult) => {
       r.item.attachmentFiles.addMultiple(this.state.uploadfiles);
-    }).then(e=>{console.log("successfully created");}).catch(e=>{console.log("Error while creating the item"+e)});
+    }).then(e => { console.log("successfully created"); }).catch(e => { console.log("Error while creating the item" + e) });
 
   }
 
