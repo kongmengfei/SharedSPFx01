@@ -4,7 +4,7 @@ import { IPnpjsuploadfilesProps } from './IPnpjsuploadfilesProps';
 import { IPnpjsuploadfilesState } from './IPnpjsuploadfilesState';
 import ReactFileReader from 'react-file-reader';
 import { IAttachmentFileInfo } from "@pnp/sp/attachments";
-import { sp, IItemAddResult } from "@pnp/sp/presets/all";
+import { sp, IItemAddResult, IViewFields } from "@pnp/sp/presets/all";
 
 export default class Pnpjsuploadfiles extends React.Component<IPnpjsuploadfilesProps, IPnpjsuploadfilesState> {
 
@@ -76,7 +76,25 @@ export default class Pnpjsuploadfiles extends React.Component<IPnpjsuploadfilesP
 
   private createItem(): void {
 
+
+    const web = await sp.web.select("Title")()
+  console.log("Web Title: ", web.Title);
+
+  const result2 = await sp.web.lists.getByTitle('kkkk').views.getByTitle('All Items')();
+
+  console.log("view: ", result2);
+
+  const fields:IViewFields = await sp.web.lists.getByTitle('kkkk').views.getByTitle('All Items').fields();
+  console.log("field: ", fields);
+
+
+
+
+
     const list = sp.web.lists.getByTitle("kkkk");
+
+
+
 
     // get all the views and their properties
     const view = list.views.getByTitle("All Items").get().
