@@ -1,6 +1,6 @@
 {
-  "name": "modaldialog",
-  "version": "0.0.2",
+  "name": "teams-tab",
+  "version": "0.0.1",
   "private": true,
   "main": "lib/index.js",
   "engines": {
@@ -13,21 +13,12 @@
   },
   "dependencies": {
     "@microsoft/sp-core-library": "1.10.0",
-    "@microsoft/sp-lodash-subset": "1.10.0",
-    "@microsoft/sp-office-ui-fabric-core": "1.10.0",
     "@microsoft/sp-property-pane": "1.10.0",
     "@microsoft/sp-webpart-base": "1.10.0",
-    "@pnp/spfx-controls-react": "^1.19.0",
-    "@types/es6-promise": "0.0.33",
-    "@types/react": "16.8.8",
-    "@types/react-dom": "16.8.3",
+    "@microsoft/sp-lodash-subset": "1.10.0",
+    "@microsoft/sp-office-ui-fabric-core": "1.10.0",
     "@types/webpack-env": "1.13.1",
-    "office-ui-fabric-react": "6.189.2",
-    "react": "16.8.5",
-    "react-dom": "16.8.5"
-  },
-  "resolutions": {
-    "@types/react": "16.8.8"
+    "@types/es6-promise": "0.0.33"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.10.0",

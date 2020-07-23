@@ -6,8 +6,11 @@
   "version": "*",
   "manifestVersion": 2,
   "requiresCustomScript": false,
+  "supportsFullBleed": true,
   "supportedHosts": [
-    "SharePointWebPart"
+    "SharePointWebPart",
+    "SharePointFullPage",
+    "TeamsTab"
   ],
   "preconfiguredEntries": [
     {
