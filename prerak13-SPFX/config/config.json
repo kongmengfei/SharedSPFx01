@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "video-wp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/videoWp/VideoWpWebPart.js",
+          "manifest": "./src/webparts/videoWp/VideoWpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "VideoWpWebPartStrings": "lib/webparts/videoWp/loc/{locale}.js"
+  }
+}
