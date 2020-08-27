@@ -1,3 +1,3 @@
 export interface ICarouseltestState {
-  items: string[]
+  items: string[];
 }

@@ -9,13 +9,6 @@ export default class Carouseltest extends React.Component<ICarouseltestProps, IC
 
   constructor(props: ICarouseltestProps, state: ICarouseltestState) {
     super(props);
-    this.state = {
-      items: ["https://icons.iconarchive.com/icons/hopstarter/3d-cartoon/128/Axialis-Icon-Workshop-icon.png",
-        "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/ICON-ICX-icon.png",
-        "https://icons.iconarchive.com/icons/blackvariant/button-ui-app-pack-one/128/Lite-Icon-icon.png",
-        "https://icons.iconarchive.com/icons/hydrattz/multipurpose-alphabet/128/Letter-P-blue-icon.png"
-      ]
-    };
   }
 
   public render(): React.ReactElement<ICarouseltestProps> {
@@ -31,19 +24,31 @@ export default class Carouseltest extends React.Component<ICarouseltestProps, IC
     const carouselItems = [
       {
         key: 'ade',
-        content: <Image src={this.state.items[0]} fluid alt={'Portrait of Ade'} />,
+        id: 'ade',
+        content: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/large/ade.jpg" fluid alt={'Portrait of Ade'} />,
+        thumbnail: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/small/ade.jpg" fluid alt={imageAltTags.ade} />,
+        'aria-label': imageAltTags.ade
       },
       {
         key: 'elliot',
-        content: <Image src={this.state.items[1]} fluid alt={'Portrait of Elliot'} />,
+        id: 'elliot',
+        content: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/large/elliot.jpg" fluid alt={imageAltTags.elliot} />,
+        thumbnail: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/small/elliot.jpg" fluid alt={imageAltTags.elliot} />,
+        'aria-label': imageAltTags.elliot,
       },
       {
-        key: 'kristy',
-        content: <Image src={this.state.items[2]} fluid alt={'Portrait of Kristy'} />,
+        key: 'molly',
+        id: 'molly',
+        content: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/large/molly.png" fluid alt={imageAltTags.molly} />,
+        thumbnail: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/small/molly.png" fluid alt={imageAltTags.molly} />,
+        'aria-label': imageAltTags.molly,
       },
       {
         key: 'nan',
-        content: <Image src={this.state.items[3]} fluid alt={'Portrait of Nan'} />,
+        id: 'nan',
+        content: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/large/nan.jpg" fluid alt={imageAltTags.nan} />,
+        thumbnail: <Image src="https://fluentsite.z22.web.core.windows.net/public/images/avatar/small/nan.jpg" fluid alt={imageAltTags.nan} />,
+        'aria-label': imageAltTags.nan,
       }
     ];
     return (
@@ -51,14 +56,18 @@ export default class Carouseltest extends React.Component<ICarouseltestProps, IC
         <Carousel
           ariaRoleDescription="carousel"
           ariaLabel="Portrait collection"
+          thumbnails
+          navigation={{
+            'aria-label': 'people portraits',
+            items: carouselItems.map((item, index) => ({
+              key: index,
+              'aria-controls': item.id,
+              'aria-label': item['aria-label'],
+              content: item.thumbnail,
+            })),
+          }}
           items={carouselItems}
-          paddleNext={{
-            'aria-label': 'go to next slide',
-          }}
-          paddlePrevious={{
-            'aria-label': 'go to previous slide',
-          }}
-          getItemPositionText={(index, size) => `${index + 1} of ${size}`}
+          getItemPositionText={(index: number, size: number) => `${index + 1} of ${size}`}
         />
       </Provider>
     );
