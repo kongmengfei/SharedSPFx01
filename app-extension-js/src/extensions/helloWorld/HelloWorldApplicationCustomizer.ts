@@ -43,6 +43,14 @@ export default class HelloWorldApplicationCustomizer
 
     console.log('jsurl:',jsurl);
 
+    //inject CSS
+    let cssUrl = '/sites/sbdev/Style%20Library/test.css';
+    let customStyle: HTMLLinkElement = document.createElement("link");
+    customStyle.href = cssUrl;
+    customStyle.rel = "stylesheet";
+    customStyle.type = "text/css";
+    head.insertAdjacentElement("beforeEnd", customStyle);
+
     return Promise.resolve();
   }
 

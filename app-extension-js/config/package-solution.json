@@ -3,7 +3,7 @@
   "solution": {
     "name": "app-extension-client-side-solution",
     "id": "696a69b7-c827-45fc-b8c8-fde58f9c81c8",
-    "version": "1.0.1.9",
+    "version": "1.0.1.10",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "features": [
