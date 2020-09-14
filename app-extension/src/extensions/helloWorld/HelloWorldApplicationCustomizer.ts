@@ -38,13 +38,13 @@ export default class HelloWorldApplicationCustomizer
       message = '(No properties were provided.)';
     }
 
-    const head: any = document.getElementsByTagName("head")[0] || document.documentElement;
-    let cssUrl = '/sites/sbdev/Style%20Library/custom.css';
-    let customStyle: HTMLLinkElement = document.createElement("link");
-    customStyle.href = cssUrl;
-    customStyle.rel = "stylesheet";
-    customStyle.type = "text/css";
-    head.insertAdjacentElement("beforeEnd", customStyle);
+    // const head: any = document.getElementsByTagName("head")[0] || document.documentElement;
+    // let cssUrl = '/sites/sbdev/Style%20Library/custom.css';
+    // let customStyle: HTMLLinkElement = document.createElement("link");
+    // customStyle.href = cssUrl;
+    // customStyle.rel = "stylesheet";
+    // customStyle.type = "text/css";
+    // head.insertAdjacentElement("beforeEnd", customStyle);
 
 
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
@@ -53,7 +53,7 @@ export default class HelloWorldApplicationCustomizer
     const settingIcon = document.getElementsByClassName("ms-Icon ms-Icon--Info")[0];
     if (settingIcon != null) {
       settingIcon.addEventListener("click", () => {
-        alert('Hi')
+        alert('Hi');
       });
     }
 
