@@ -33,6 +33,7 @@ export default class MyFirstTeamsTabWebPart extends BaseClientSideWebPart<IMyFir
       siteTabTitle = "We are in the context of following site: " + this.context.pageContext.web.title;
     }
 
+
     this.domElement.innerHTML = `
     <div class="${ styles.myFirstTeamsTab}">
       <div class="${ styles.container}">
@@ -49,10 +50,6 @@ export default class MyFirstTeamsTabWebPart extends BaseClientSideWebPart<IMyFir
         </div>
       </div>
     </div>`;
-  }
-
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
