@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://isvdevchat.sharepoint.com/sites/sbdev/SitePages/search.aspx",
+      "pageUrl": "https://isvdevchat.sharepoint.com/sites/testprivate/SitePages/mysitepage.aspx",
       "customActions": {
         "28f6c708-a9d1-46cd-b037-bd781a97f476": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -17,7 +17,7 @@
       }
     },
     "helloWorld": {
-      "pageUrl": "https://isvdevchat.sharepoint.com/sites/sbdev/SitePages/search.aspx",
+      "pageUrl": "https://isvdevchat.sharepoint.com/sites/testprivate/SitePages/mysitepage.aspx",
       "customActions": {
         "28f6c708-a9d1-46cd-b037-bd781a97f476": {
           "location": "ClientSideExtension.ApplicationCustomizer",

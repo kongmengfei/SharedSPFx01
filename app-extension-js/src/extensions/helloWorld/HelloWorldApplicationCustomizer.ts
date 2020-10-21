@@ -35,13 +35,15 @@ export default class HelloWorldApplicationCustomizer
 
     const head: any = document.getElementsByTagName("head")[0] || document.documentElement;
 
-    let articleRedirectScriptTag: HTMLScriptElement = document.createElement("script");
-    let jsurl = `${this.context.pageContext.web.serverRelativeUrl}/Style library/Hemanthkumar.js`;
-    articleRedirectScriptTag.src = jsurl;
-    articleRedirectScriptTag.type = "text/javascript";
-    head.insertAdjacentElement("beforeEnd", articleRedirectScriptTag);
+    // let articleRedirectScriptTag: HTMLScriptElement = document.createElement("script");
+    // let jsurl = `${this.context.pageContext.web.serverRelativeUrl}/Style library/Hemanthkumar.js`;
+    // articleRedirectScriptTag.src = jsurl;
+    // articleRedirectScriptTag.type = "text/javascript";
+    // head.insertAdjacentElement("beforeEnd", articleRedirectScriptTag);
 
-    console.log('jsurl:',jsurl);
+    // console.log('jsurl:',jsurl);
+
+    require('../../../asset/Hemanthkumar.js');
 
     //inject CSS
     let cssUrl = '/sites/sbdev/Style%20Library/test.css';
