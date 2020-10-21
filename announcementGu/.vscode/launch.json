@@ -25,7 +25,7 @@
       "name": "Hosted workbench",
       "type": "chrome",
       "request": "launch",
-      "url": "https://isvdevchat.sharepoint.com/sites/tcccc/_layouts/workbench.aspx",
+      "url": "https://isvdevchat.sharepoint.com/sites/sbdev/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {

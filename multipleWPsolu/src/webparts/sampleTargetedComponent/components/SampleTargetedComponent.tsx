@@ -25,7 +25,7 @@ export default class SampleTargetedComponent extends React.Component<ISampleTarg
               <span className={styles.title}>Sample webpart</span>
               <p className={styles.subTitle}>{this.state.description}</p>
               <a href="https://aka.ms/spfx" className={styles.button}>
-                <span className={styles.label}>Learn more</span>
+                <span className={styles.label}>Learn more001</span>
               </a>
             </div>
           </div>
