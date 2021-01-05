@@ -27,9 +27,10 @@ export default class TargetAudience extends React.Component<ITargetAudienceProps
   }
   public componentDidMount(): void {
     //setting the state whether user has permission to view webpart
-    this.checkUserCanViewWebpart();
+    //this.checkUserCanViewWebpart();
     this.checkUserInAzureAD();
   }
+  
   public render(): JSX.Element {
     return (
       <div>{this.props.groupIds ? (this.state.canView ?
