@@ -26,9 +26,9 @@ export default class spservices {
   }
 
   public async isAADmember(groupId: string, userPrincipalName: string): Promise<any> {
-    const clientId = "e0cefc2c-1104-4622-81ab-f7b42xxxxxx3";
+    const clientId = "e0cefc2c-1104-4622-81ab-f7b421063112";
 
-    const clientSecret = "5x.l9_2ffAZ4bCuNW3_~O43-HV.R_0UjNx";
+    const clientSecret = "-o68yz844the8l.-EoJI1L3.ZggoGv9_Ay";
 
     const hostName = window.location.hostname.replace('.sharepoint.com', '');
 

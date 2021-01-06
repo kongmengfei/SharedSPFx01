@@ -66,9 +66,9 @@ export default class TargetAudience extends React.Component<ITargetAudienceProps
 
     let groupids = ["ea866578-ee7f-48ba-bdbd-9acca12b6da8", "900d5101-469f-4c47-8115-c2ac974e1e8d"];
 
-    // groupids.map(item => {
-    //   proms.push(_sv.isAADmember(item, self.props.pageContext.legacyPageContext[`userPrincipalName`]));
-    // });
+    groupids.map(item => {
+      proms.push(_sv.isAADmember(item, self.props.pageContext.legacyPageContext[`userPrincipalName`]));
+    });
 
     Promise.race(proms).then(val => {
       this.setState({ canView: true }); //atleast one promise resolved
